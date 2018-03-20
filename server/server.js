@@ -16,8 +16,8 @@ const users  = {
 		console.log(ctx.request.body)
 		const body = ctx.request.body
 		const {userId, password} = body
-		if(users[userId] === undefined) {
-			users[userId] = password
+		if(userList[userId] === undefined) {
+			userList[userId] = password
 			ctx.body = {
 				userId,
 				message: 'User Successfully Created'
@@ -35,7 +35,7 @@ const users  = {
 		const body = ctx.request.body
 		const {userId, password} = body
 		console.log(userId, password)
-		if(!users[userId] || users[userId] !== password){
+		if(!userList[userId] || userList[userId] !== password){
 			ctx.status = 401
 			ctx.body = {
 				userId,
