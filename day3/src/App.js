@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import {connect} from 'react-redux'
 import {login} from './actions/loginActions'
+import Login from './components/login/Login'
 
 
 
@@ -93,6 +94,7 @@ class App extends Component {
     return (
       <div>
         <LoggedInChildApp age={this.state.age} name='Jishnu' onHeaderClick={this.headerClick}/>
+        <Login />
     </div>);
   }
 }
