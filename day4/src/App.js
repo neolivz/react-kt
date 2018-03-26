@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
+import {connect} from 'react-redux'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+
 import logo from './logo.svg';
 import './App.css';
-import {connect} from 'react-redux'
 import {login} from './actions/loginActions'
 import Login from './containers/login/LoginContainer'
 import Welcome from './components/welcome/Welcome'
@@ -41,9 +44,12 @@ class App extends Component {
 
   render() {
     return (
+    <Router>
       <div>
-        <Login />
-    </div>);
+        <Route exact path="/" component={Login} />
+        <Route exact path="/welcome" component={Welcome} />
+      </div>
+    </Router>)
   }
 }
 
