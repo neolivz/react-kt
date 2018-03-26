@@ -8,10 +8,10 @@ const Login = (props) => {
       </AppHeader>
       <AppBody>
         <LoginElement> <AppLabel for='username'>User Name</AppLabel></LoginElement>
-        <LoginElement> <AppInput name='username' id='username'/></LoginElement>
+        <LoginElement> <AppInput name='username' id='username' onChange={(e) => props.onUsernameChange(e.target.value)}/></LoginElement>
         <LoginElement> <AppLabel for='password'>Password</AppLabel></LoginElement>
-        <LoginElement> <AppInput name='password' id='password' type='text'/></LoginElement>
-        <LoginElement> <AppButton>Login</AppButton></LoginElement>
+        <LoginElement> <AppInput name='password' id='password' type='password' onChange={(e) => props.onPasswordChange(e.target.value)}/></LoginElement>
+        <LoginElement> <AppButton onClick={props.login}>Login</AppButton></LoginElement>
       </AppBody>
     </LoginRoot>
   )

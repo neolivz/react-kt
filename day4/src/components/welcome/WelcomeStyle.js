@@ -1,12 +1,12 @@
 import {Grid, Row, Col} from 'react-styled-flexboxgrid'
 import styled from 'styled-components'
 import {darkGray, primary, primaryLight, primaryText, secondary, secondaryText} from '../../constants/colorConstants' 
-export const LoginRoot = styled(Grid)`
+export const WelcomeRoot = styled(Grid)`
   background-color: ${darkGray};
   width: 40rem;
   min-height: 40rem;
 `
-export const LoginElement = styled(Col)`
+export const WelcomeElement = styled(Col)`
   width: 100%;
   padding: 0.5rem;
 `

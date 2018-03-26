@@ -1,6 +1,6 @@
 import React from 'react'
-import {WelcomeRoot, WelcomeElement, AppHeader, AppHeaderText, AppBody, AppButton, AppInput, AppLabel} from './LoginStyle'
-const Login = (props) => {
+import {WelcomeRoot, WelcomeElement, AppHeader, AppHeaderText, AppBody, AppButton, AppInput, AppLabel} from './WelcomeStyle'
+const Welcome = (props) => {
   return (
     <WelcomeRoot>
       <AppHeader>
@@ -13,4 +13,4 @@ const Login = (props) => {
   )
 }
 
-export default Login
+export default Welcome
